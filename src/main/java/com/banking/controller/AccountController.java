@@ -39,6 +39,7 @@ public class AccountController {
 	            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Account not found");
 	        }
 	    }
+	 
 	 @PutMapping("/deposit/{id}")
 	 public ResponseEntity<String> toDepositAmount(@PathVariable Long id, @RequestBody Map<String, Double>deposits) {
 		 Optional<Account> accountOptional= accountRepository.findById(id);

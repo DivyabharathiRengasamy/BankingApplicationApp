@@ -15,28 +15,25 @@ public class Account {
 	private Long id;
 	private String accountHolderName;
     private double balance;
-    @NotBlank(message = "Username is required")
-    private String userName;
-
-    @NotBlank(message = "Password is required")
-    @Size(min = 8, message = "Password must be at least 8 characters long")
-    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$",
-            message = "Password must contain at least one digit, one letter, and one special character")
-    private String password;
+//    @NotBlank(message = "Username is required")
+//    private String userName;
+//
+//    @NotBlank(message = "Password is required")
+//    @Size(min = 8, message = "Password must be at least 8 characters long")
+//    @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$",
+//            message = "Password must contain at least one digit, one letter, and one special character")
+//    private String password;
     
 	public Account() {
 		super();
 	}
 
-	public Account(Long id, String accountHolderName, double balance,
-			@NotBlank(message = "Username is required") String userName,
-			@NotBlank(message = "Password is required") @Size(min = 8, message = "Password must be at least 8 characters long") @Pattern(regexp = "^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[@#$%^&+=!])(?=\\S+$).{8,}$", message = "Password must contain at least one digit, one letter, and one special character") String password) {
+	public Account(Long id, String accountHolderName, double balance) {
 		super();
 		this.id = id;
 		this.accountHolderName = accountHolderName;
 		this.balance = balance;
-		this.userName = userName;
-		this.password = password;
+		
 	}
 
 	public Long getId() {
@@ -63,21 +60,21 @@ public class Account {
 		this.balance = balance;
 	}
 
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
+//	public String getUserName() {
+//		return userName;
+//	}
+//
+//	public void setUserName(String userName) {
+//		this.userName = userName;
+//	}
+//
+//	public String getPassword() {
+//		return password;
+//	}
+//
+//	public void setPassword(String password) {
+//		this.password = password;
+//	}
 	
 }
 
